@@ -39,8 +39,12 @@
 .header .mega-menu__link--dropdown {
   position: relative;
 }
-.header .mega-menu__link--dropdown:hover .mega-menu__dropdown {
+.header .mega-menu__link--dropdown .menu-button[aria-expanded=true] + .submenu {
   display: block;
+}
+.header .mega-menu__link--dropdown .menu-button:focus,
+.header .mega-menu__link--dropdown [role=menuitem]:focus {
+  outline: 2px solid blue;
 }
 .header .mega-menu__dropdown {
   list-style: none;
@@ -49,4 +53,7 @@
   top: 2rem;
   padding: 1rem;
   border: 1px solid black;
+}
+.header .mega-menu__dropdown__hidden {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

@@ -41,10 +41,13 @@
             &--dropdown {
                 position: relative;
 
-                &:hover {
-                    #{$self}__dropdown {
-                        display: block;
-                    }
+                .menu-button[aria-expanded="true"] + .submenu {
+                    display: block;
+                }
+
+                .menu-button:focus,
+                [role="menuitem"]:focus {
+                    outline: 2px solid blue;
                 }
             }
         }   
@@ -56,6 +59,10 @@
             top: 2rem;
             padding: 1rem;
             border: 1px solid black;
+
+            &__hidden {
+                display: none;
+            }
         }
     }
 }
