@@ -66,3 +66,15 @@
         }
     }
 }
+
+.form-container {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 1rem;
+
+    .form-header {
+        .heading {
+            margin-bottom: 1rem;
+        }
+    }
+}

@@ -7,6 +7,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Contact</h1>
+    <header class="header">
+		<div class="logo">
+			<p>Logo.</p>
+		</div>
+
+		<nav aria-label="Main navigation" class="mega-menu">
+			<ul role="menubar" class="mega-menu__list">
+				<li role="presentation" class="mega-menu__link">
+					<a role="menuitem" href="#">Home</a>
+				</li>
+				<li role="presentation" class="mega-menu__link mega-menu__link--dropdown">
+					<button role="menuitem" aria-haspopup="true" aria-expanded="false" aria-controls="primary-dropdown" class="menu-button">Company</button>
+					<ul id="primary-dropdown" role="menu" class="mega-menu__dropdown submenu" hidden>	
+						<li role="presentation" class="mega-menu__link">
+							<a role="menuitem" href="#" title="Read about us">About Us</a>
+						</li>
+						<li role="presentation" class="mega-menu__link">
+							<a role="menuitem" href="#" title="Read our blog">Blog</a>
+						</li>
+						<li role="presentation" class="mega-menu__link">
+							<a role="menuitem" href="#" title="Explore the library">Library</a>
+						</li>
+						<li role="presentation" class="mega-menu__link">
+							<a role="menuitem" href="#" title="Read our news and articles">Newsletter</a>
+						</li>
+					</ul>
+				<li class="mega-menu__link"><a href="contact.html" target="_blank">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<script src="script.js"></script>
+    
+    <main class="form-container">
+        <header class="form-header">
+            <h1 class="heading">
+                Contact us
+            </h1>
+            <p>(*) Asterisk denotes mandatory fields</p>
+        </header>
+
+        <form action="" class="form">
+            <div class="form__column">
+                <input type="text" placeholder="First name*" class="form__input">
+                <input type="text" placeholder="Last name*" class="form__input">
+                <input type="email" placeholder="Work email*" class="form__input">
+                <input type="text" placeholder="Company*" class="form__input">
+                <input type="text" placeholder="Job title*" class="form__input">
+                <input type="text" placeholder="Phone number (optional)" class="form__input">
+                <label for="privacy"><input type="checkbox" id="privacy" name="privacy"> I agree to the <a href="#">privacy notice</a></label>
+            </div>
+            <div class="form__column">
+                <textarea name="" id="" placeholder="How can I help you?"></textarea>
+            </div>
+        </form>
+    </main>
 </body>
 </html>

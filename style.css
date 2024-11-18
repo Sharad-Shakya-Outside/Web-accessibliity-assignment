@@ -56,4 +56,13 @@
 }
 .header .mega-menu__dropdown__hidden {
   display: none;
+}
+
+.form-container {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 1rem;
+}
+.form-container .form-header .heading {
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=style.css.map */
