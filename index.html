@@ -2,49 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Accessiblity Assignment</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Accessiblity Assignment</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">
-            <p>Logo.</p>
-        </div>
+	<header class="header">
+		<div class="logo">
+			<p>Logo.</p>
+		</div>
 
-        <nav aria-label="main menu" class="mega-menu">
-            <ul role="menubar" class="mega-menu__list">
-                <li role="presentation" class="mega-menu__link">
-                    <a role="menuitem" href="#">Home</a>
-                </li>
-                <li role="presentation" aria-controls="menu" aria-haspopup="true"
-                    class="mega-menu__link mega-menu__link--dropdown">
-                    <div role="presentation">
-                        <button role="menuitem" tabindex="-1" aria-haspopup="true" aria-expanded="true">Company</button>
-                    </div>
-                    <div class="submenu" role="presentation">
-                        <ul role="menu" class="mega-menu__dropdown">
-                            <li role="presentation" class="mega-menu__link">
-                                <a role="menuitem" tabindex="-1" href="#" title="Read about us">About Us</a>
-                            </li>
-                            <li role="presentation" class="mega-menu__link">
-                                <a role="menuitem" tabindex="-1" href="#" title="Read our blog">Blog</a>
-                            </li>
-                            <li role="presentation" class="mega-menu__link">
-                                <a role="menuitem" tabindex="-1" href="#" title="Explore the library">Library</a>
-                            </li>
-                            <li role="presentation" class="mega-menu__link">
-                                <a role="menuitem" tabindex="-1" href="#" title="Read our news and articles">Newsletter</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="mega-menu__link"><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+		<nav aria-label="Main navigation" class="mega-menu">
+			<ul role="menubar" class="mega-menu__list">
+				<li role="presentation" class="mega-menu__link">
+					<a role="menuitem" href="#">Home</a>
+				</li>
+				<li role="presentation" class="mega-menu__link mega-menu__link--dropdown">
+					<button role="menuitem" aria-haspopup="true" aria-expanded="false" aria-controls="primary-dropdown">Company</button>
+					<ul id="primary-dropdown" role="menu" class="mega-menu__dropdown" hidden>	
+						<li role="presentation" class="mega-menu__link">
+							<a role="menuitem" href="#" title="Read about us">About Us</a>
+						</li>
+						<li role="presentation" class="mega-menu__link">
+							<a role="menuitem" href="#" title="Read our blog">Blog</a>
+						</li>
+						<li role="presentation" class="mega-menu__link">
+							<a role="menuitem" href="#" title="Explore the library">Library</a>
+						</li>
+						<li role="presentation" class="mega-menu__link">
+							<a role="menuitem" href="#" title="Read our news and articles">Newsletter</a>
+						</li>
+					</ul>
+				<li class="mega-menu__link"><a href="contact.html" target="_blank">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<script src="script.js"></script>
 </body>
 
 </html>
