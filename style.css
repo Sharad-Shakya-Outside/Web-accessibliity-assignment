@@ -6,15 +6,24 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
+  background-color: #0D9B9E;
   display: flex;
   justify-content: space-between;
-  max-width: 100vw;
-  padding: 2rem;
+  max-width: 100%;
+  padding-inline: 2rem;
+  margin: 1rem;
+  position: sticky;
+  top: 0;
 }
-.header .logo p {
+.header .logo h1 {
   font-size: 4rem;
   font-weight: 700;
+  color: white;
 }
 .header .mega-menu {
   padding-inline: 1rem;
@@ -33,8 +42,13 @@
 }
 .header .mega-menu__link a, .header .mega-menu__link button {
   text-decoration: none;
-  background-color: white;
+  font-size: 2rem;
   border: none;
+  color: white;
+  background-color: transparent;
+}
+.header .mega-menu__link [role=menuitem]:focus {
+  outline: 2px solid white;
 }
 .header .mega-menu__link--dropdown {
   position: relative;
@@ -44,25 +58,59 @@
 }
 .header .mega-menu__link--dropdown .menu-button:focus,
 .header .mega-menu__link--dropdown [role=menuitem]:focus {
-  outline: 2px solid blue;
+  outline: 2px solid white;
 }
 .header .mega-menu__dropdown {
   list-style: none;
   display: none;
   position: absolute;
-  top: 2rem;
+  top: 4rem;
   padding: 1rem;
-  border: 1px solid black;
+  border-radius: 1rem;
+  background-color: white;
 }
 .header .mega-menu__dropdown__hidden {
   display: none;
 }
-
-.form-container {
-  max-width: 1000px;
-  margin-inline: auto;
-  padding: 1rem;
+.header .mega-menu__dropdown .mega-menu__link a {
+  color: black;
 }
-.form-container .form-header .heading {
+
+.container .home {
+  height: 100vh;
+  background-color: red;
+  border-radius: 20px;
+  padding: 5rem;
   margin-bottom: 1rem;
+}
+.container .contact {
+  background-color: yellow;
+  border-radius: 20px;
+  padding: 5rem;
+}
+.container .contact__form input {
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid black;
+}
+.container .contact__form textarea {
+  border: none;
+  border: 1px solid purple;
+}
+.container .contact__form a {
+  color: #9c2a00;
+}
+.container .contact__submit {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border: none;
+  color: white;
+  background-color: purple;
+}
+.container .contact__submit:hover {
+  background-color: white;
+  color: black;
 }/*# sourceMappingURL=style.css.map */
