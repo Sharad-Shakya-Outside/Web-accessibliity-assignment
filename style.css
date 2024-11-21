@@ -56,9 +56,11 @@ html {
 .header .mega-menu__link--dropdown .menu-button[aria-expanded=true] + .submenu {
   display: block;
 }
-.header .mega-menu__link--dropdown .menu-button:focus,
-.header .mega-menu__link--dropdown [role=menuitem]:focus {
+.header .mega-menu__link--dropdown .menu-button:focus {
   outline: 2px solid white;
+}
+.header .mega-menu__link--dropdown .submenu [role=menuitem]:focus {
+  outline: 2px solid black;
 }
 .header .mega-menu__dropdown {
   list-style: none;
@@ -76,6 +78,9 @@ html {
   color: black;
 }
 
+.container {
+  margin-inline: 2rem;
+}
 .container .home {
   height: 100vh;
   background-color: red;
@@ -83,16 +88,32 @@ html {
   padding: 5rem;
   margin-bottom: 1rem;
 }
+.container .home__header h1 {
+  color: white;
+}
 .container .contact {
   background-color: yellow;
   border-radius: 20px;
   padding: 5rem;
+  margin-bottom: 1rem;
+}
+.container .contact__form .form-label:not(.form-label[for=privacy]) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  width: 1px;
 }
 .container .contact__form input {
   margin-bottom: 2rem;
   border: none;
   border-radius: 0;
   border-bottom: 1px solid black;
+}
+.container .contact__form input[type=checkbox] {
+  accent-color: #9c2a00;
 }
 .container .contact__form textarea {
   border: none;

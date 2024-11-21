@@ -11,7 +11,7 @@
 
 <body>
 	<header class="header rounded-pill">
-		<div class="logo">
+		<div role="banner" class="logo">
 			<h1>Logo.</h1>
 		</div>
 
@@ -37,12 +37,13 @@
 							<a role="menuitem" href="#" title="Read our news and articles">Newsletter</a>
 						</li>
 					</ul>
-				<li class="mega-menu__link"><a role="menuitem" href="#contact" title="Navigate to contact section">Contact</a></li>
+				<li class="mega-menu__link"><a role="menuitem" href="#contact"
+						title="Navigate to contact section">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
 
-	<main class="container">
+	<main role="main" class="container">
 		<section id="home" class="home">
 			<header class="home__header">
 				<h1>Home</h1>
@@ -52,36 +53,61 @@
 		<section id="contact" class="contact">
 			<header class="contact__header">
 				<h1 class="contact__heading">
-					Contact us
+					Get in touch
 				</h1>
 				<p>(*) Asterisk denotes mandatory fields</p>
 			</header>
 
-			<form action="" class="py-4 contact__form">
+			<form action="" class="py-4 contact__form" aria-label="Your Contact information">
 				<div class="row">
 					<div class="col-4">
-						<input type="text" id="first-name" placeholder="First name*" class="form-control" required>
+						<label for="first-name" class="form-label">
+							Your First Name
+						</label>
+						<input type="text" id="first-name" placeholder="First name*" class="form-control" aria-required="true" required>
 
-						<input type="email" id="email" placeholder="Work email*" class="form-control" required>
+						<label for="email" class="form-label">
+							Work Email
+						</label>
+						<input type="email" id="email" placeholder="Work email*" class="form-control" aria-required="true" required>
 
-						<input type="text" id="job-title" placeholder="Job title*" class="form-control" required>
 
-						<label for="privacy" class="form-label"><input type="checkbox" id="privacy" name="privacy" required> I agree to the <a href="#">privacy notice</a></label>
+						<label for="job-title" class="form-label w-10">
+							Job Title
+						</label>
+						<input type="text" id="job-title" placeholder="Job title*" class="form-control" aria-required="true" required>
+
+						<label for="privacy" class="form-label"><input type="checkbox" id="privacy" name="privacy" aria-required="true"
+								required> I agree to the <a href="#">privacy notice</a></label>
 					</div>
 
 					<div class="col-4">
-						<input type="text" id="last-name" placeholder="Last name*" class="form-control" required>
 
-						<input type="text" id="company" placeholder="Company*" class="form-control" required>
+						<label for="last-name" class="form-label w-100">
+							Last Name
+						</label>
+						<input type="text" id="last-name" placeholder="Last name*" class="form-control" aria-required="true" required>
 
-						<input type="tel" id="phone" placeholder="Phone number (optional)" class="form-control" required>
+						<label for="company" class="form-label w-100">
+							Company
+						</label>
+						<input type="text" id="company" placeholder="Company*" class="form-control" aria-required="true" required>
+
+						<label for="phone" class="form-label w-100">
+							Phone Number
+						</label>
+						<input type="tel" id="phone" placeholder="Phone number (optional)" class="form-control" aria-required="true" required>
 					</div>
 
 					<div class="col-4">
-						<textarea class="form-control h-100" name="help" id="help" placeholder="How can we help you?" required></textarea>
+						<label for="help" class="form-label">
+							State your concerns
+						</label>
+						<textarea class="form-control h-100" name="help" id="help" placeholder="How can we help you?" aria-required="true"
+							required></textarea>
 					</div>
 				</div>
-				
+
 				<button id="submit" type="submit" class="mt-5 contact__submit rounded-pill">Submit</button>
 			</form>
 		</section>
